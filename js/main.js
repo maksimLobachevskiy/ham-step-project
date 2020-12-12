@@ -15,11 +15,11 @@ tab.forEach(function(item){
 });
 
 //Reviews
-const customerHidden = document.getElementsByClassName('customer_hidden');
-const thumbHidden = document.getElementsByClassName('hide-authors-mini');
-const thumbnailPhoto = Array.from(document.getElementsByClassName('thumbnail'));
-const prevSlide = document.getElementsByClassName('left');
-const nextSlide = document.getElementsByClassName('right');
+const customerHidden = document.querySelectorAll('.customer_hidden');
+const thumbHidden = document.querySelectorAll('.hide-authors-mini');
+const thumbnailPhoto = Array.from(document.querySelectorAll('.thumbnail'));
+const prevSlide = document.querySelectorAll('.left');
+const nextSlide = document.querySelectorAll('.right');
 
 const applyHiddenClass = (cls, length = cls.length, count = 0) => {
     for (let i = count; i < length; i++) {
@@ -30,8 +30,7 @@ applyHiddenClass(customerHidden);
 applyHiddenClass(thumbHidden);
 
 function showReview() {
-    const thumbnailPhoto = Array.from(document.getElementsByClassName('thumbnail'));
-    const customerReview = Array.from(document.getElementsByClassName('customer_review'));
+    const customerReview = Array.from(document.querySelectorAll('.customer_review'));
     customerReview.forEach((value) => value.style.display = 'none');
     const customerData = this.getAttribute('data-customer');
     const reviewData = customerReview.filter((value) => {
@@ -44,10 +43,10 @@ function showReview() {
 
 const prevReview = () => {
     const currentImageIndex = thumbnailPhoto.findIndex((items) => items.classList.contains('thumbnail_animate'));
-    const currentImage = document.getElementsByClassName('thumbnail_animate');
+    const currentImage = document.querySelectorAll('.thumbnail_animate');
     let prevImageIndex = currentImageIndex - 1;
     let prevImage = thumbnailPhoto[prevImageIndex];
-    const customerReview = Array.from(document.getElementsByClassName('customer_review'));
+    const customerReview = Array.from(document.querySelectorAll('.customer_review'));
     customerReview.forEach((items) => items.style.display = 'none');
 
     if (currentImageIndex === 0) {
@@ -67,10 +66,10 @@ const prevReview = () => {
 
 const nextReview = () => {
     const currentImageIndex = thumbnailPhoto.findIndex((items) => items.classList.contains('thumbnail_animate'));
-    const currentImage = document.getElementsByClassName('thumbnail_animate');
+    const currentImage = document.querySelectorAll('.thumbnail_animate');
     let nextImageIndex = currentImageIndex + 1;
     let nextImage = thumbnailPhoto[nextImageIndex];
-    const customerReview = Array.from(document.getElementsByClassName('customer_review'));
+    const customerReview = Array.from(document.querySelectorAll('.customer_review'));
 
     customerReview.forEach((items) => items.style.display = 'none');
 

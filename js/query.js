@@ -33,6 +33,7 @@ $(function (){
     });
     });
 
+  
 
 // init Masonry
 $(function() {
@@ -67,4 +68,28 @@ $grid.imagesLoaded().progress( function() {
         $subGrid2.masonry();
     });
 
+});
+
+//Load gallery
+$(function() {
+    const hiddenGrid = $('.grid-hidden').toArray();
+    const loadMore = $('#load_gallery');
+    if ($(hiddenGrid).length !== 0) {
+        $("#load_gallery").show();
+    }
+    $(loadMore).on('click', function() {
+    
+        $(hiddenGrid).removeClass('grid-hidden').slideDown( "1000" );
+    
+    $('.grid').masonry({
+        columnWidth: '.grid-sizer',
+        itemSelector: '.grid-item',
+        percentPosition: true,
+        gutter: '.gutter-sizer',
+        
+});
+if ($('.grid-hidden').toArray().length === 0) {
+    $("#load_gallery").fadeOut('slow');}
+
+});
 });

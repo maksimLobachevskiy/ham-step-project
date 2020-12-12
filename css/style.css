@@ -223,10 +223,18 @@ body {
     padding: 18px 17px;
     cursor: pointer;
     line-height: 39px;
+    flex-basis: 16%;
     border-top: 1px solid #EDEFEF;
     border-bottom: 1px solid #EDEFEF;
+}
+
+.tabs-title:nth-child(odd) {
     border-right: 1px solid #EDEFEF;
-    flex-basis: 16%;
+    border-left: 1px solid #EDEFEF;
+}
+
+.tabs-title:last-child {
+    border-right: 1px solid #EDEFEF;
 }
 
 .tabs-title:hover {
@@ -511,7 +519,7 @@ body {
 }
 
 .customer_name {
-    color: #18cfab;
+    color: #18CFAB;
     font-weight: 700;
     padding-top: 37px;
     text-transform: uppercase;
@@ -578,14 +586,6 @@ body {
     cursor: pointer;
     border: none;
 }
-
-/*.control.left {*/
-/*    margin-right: 20px;*/
-/*}*/
-
-/*.control.right {*/
-/*    margin-right: 20px;*/
-/*}*/
 
 .thumbnail_wrapper {
     display: flex;
@@ -677,9 +677,10 @@ body {
     width: 1%;
 }
 
-.grid.grid-hidden {
+.grid-item.grid-hidden {
     display: none; 
 }
+
 /* Footer */
 .footer {
     background-color: #22353F;

@@ -43,11 +43,15 @@ body {
     position: relative;
 }
 
-.nav_menu > .menu_item a:hover, .search:hover {
+.nav_menu > .menu_item a:hover {
     color: #18CFAB;
 }
 
-.menu_item a:hover::after, .search:hover::after {
+.search .fa-search:hover {
+      color: #18CFAB;
+}
+
+.menu_item a:hover::after{
     content: "";
     position: absolute;
     background-color: #18CFAB;
@@ -59,6 +63,8 @@ body {
 
 .search {
     position: relative;
+    color: #fff;
+    opacity: 0.6;
 }
 
 .logo {

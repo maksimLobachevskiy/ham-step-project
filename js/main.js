@@ -62,6 +62,7 @@ const prevReview = () => {
     currentImage[0].classList.remove('thumbnail_animate');
     prevImage.classList.add('thumbnail_animate');
     customerReview[prevImageIndex].style.display = '';
+    customerReview[prevImageIndex].classList.add('animate__slideInRight');
 };
 
 const nextReview = () => {
@@ -86,8 +87,15 @@ const nextReview = () => {
     currentImage[0].classList.remove('thumbnail_animate');
     nextImage.classList.add('thumbnail_animate');
     customerReview[nextImageIndex].style.display = '';
+    customerReview[nextImageIndex].classList.add('animate__slideInLeft');
 };
 
-thumbnailPhoto.forEach((value) => value.addEventListener('click', showReview));
+const thumbnail = document.querySelectorAll('.thumbnail');
+
+thumbnail.forEach(function(item){
+    item.addEventListener('click', showReview);
+});
+
+//thumbnailPhoto.forEach((value) => value.addEventListener('click', showReview));
 prevSlide[0].addEventListener('click', prevReview);
 nextSlide[0].addEventListener('click', nextReview);

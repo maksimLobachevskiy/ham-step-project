@@ -40,10 +40,25 @@ body {
 
 .nav_menu > .menu_item {
     padding: 0 21px 0 21px;
+    position: relative;
 }
 
-.nav_menu > .menu_item a:hover {
+.nav_menu > .menu_item a:hover, .search:hover {
     color: #18CFAB;
+}
+
+.menu_item a:hover::after, .search:hover::after {
+    content: "";
+    position: absolute;
+    background-color: #18CFAB;
+    height: 2px;
+    left: 0;
+    width: 100%;
+    top: 72px;
+}
+
+.search {
+    position: relative;
 }
 
 .logo {
@@ -211,12 +226,12 @@ body {
 
 .tabs {
     display: flex;
-    width: 1200px;
     margin: 100px 0 27px 0;
     color: #717171;
 }
 
 .tabs-title {
+    flex: 1;
     background-color: #F8FCFE;
     text-align: center;
     padding: 18px 17px;
@@ -287,7 +302,7 @@ body {
 }
 
 .callout_section {
-    padding-bottom: 128px;
+    padding: 128px 0 92px 0;
     text-align: center;
 }
 
@@ -296,7 +311,7 @@ body {
     font-size: 40px;
     color: #18CFAB;
     text-transform: uppercase;
-    padding: 127px 0 12px 0;
+    padding: 0 0 12px 0;
 }
 
 .callout_desc {
@@ -345,11 +360,13 @@ body {
 .portfolio {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .portfolio_item {
     line-height: 0;
     position: relative;
+    transition: .5s;
 }
 
 .portfolio_overlay {
@@ -368,7 +385,7 @@ body {
     cursor: pointer;
 }
 
-.portfolio_overlay:hover {
+.portfolio_item:hover .portfolio_overlay{
     opacity: 1;
 }
 
@@ -376,7 +393,7 @@ body {
     text-align: center;
 }
 
-.link_icon {
+.link_icon, .stop_icon {
     color: #1FDAB5;
     border: 1px solid #18CFAB;
     border-radius: 30px;
@@ -384,7 +401,7 @@ body {
     margin-right: 3px;
 }
 
-.stop_icon {
+.link_icon:hover, .stop_icon:hover {
     color: #fff;
     border-radius: 30px;
     padding: 15px;
@@ -654,6 +671,7 @@ body {
 
 .grid-item img {
     width: 100%;
+    height: 100%;
 
 }
 .grid-item--width2 {
@@ -679,6 +697,36 @@ body {
     display: none; 
 }
 
+.grid_hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.64);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.grid_hover:hover {
+    opacity: 1;
+
+}
+.hover_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    padding: 10px;
+    background-color: #14B9D5;
+}
+
+.fa-search, .fa-arrows-alt {
+    cursor: pointer;
+    color: #fff;
+}
 /* Footer */
 .footer {
     background-color: #22353F;

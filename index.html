@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Step Project Ham</title>
   </head>
   <body>
@@ -26,9 +27,7 @@
             <li class="menu_item"><a href="#">Service</a></li>
             <li class="menu_item"><a href="#">Work</a></li>
             <li class="menu_item"><a href="#">Testimonial</a></li>
-            <li class="menu_item">
-              <a href="#"><i class="fas fa-search"></i></a>
-            </li>
+            <a class="search" href="#"><i class="fas fa-search"></i></a>
           </ul>
         </nav>
       </div>
@@ -556,7 +555,7 @@
             What People Say About theHam
           </h2>
           <div class="reviews_wrapper">
-            <div class="customer_review" data-customer="ali">
+            <div class="customer_review animate__animated" data-customer="ali">
               <img class="quote" src="images/quote.svg" alt="quote" />
               <div class="review_text">
                 Integer dignissim, augue tempus ultricies luctus, quam dui
@@ -571,7 +570,7 @@
                 <img class="photo" src="images/Layer%20344.png" alt="ali" />
               </div>
             </div>
-            <div class="customer_review customer_hidden" data-customer="john">
+            <div class="customer_review customer_hidden animate__animated" data-customer="john">
               <img class="quote" src="images/quote.svg" alt="quote" />
               <div class="review_text">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -585,7 +584,7 @@
                 <img class="photo" src="images/john.jpg" alt="john" />
               </div>
             </div>
-            <div class="customer_review customer_hidden" data-customer="alice">
+            <div class="customer_review customer_hidden animate__animated" data-customer="alice">
               <img class="quote" src="images/quote.svg" alt="quote" />
               <div class="review_text">
                 Creation timelines for the standard lorem ipsum passage vary,
@@ -599,7 +598,7 @@
                 <img class="photo" src="images/successful-business-woman.jpg" alt="alice" />
               </div>
             </div>
-            <div class="customer_review customer_hidden" data-customer="steve">
+            <div class="customer_review customer_hidden animate__animated" data-customer="steve">
               <img class="quote" src="images/quote.svg" alt="quote" />
               <div class="review_text">
                 Some claim lorem ipsum threatens to promote design over content,
@@ -613,7 +612,7 @@
                 <img class="photo" src="images/steve.jpg" alt="steve" />
               </div>
             </div>
-            <div class="customer_review customer_hidden" data-customer="sharon">
+            <div class="customer_review customer_hidden animate__animated" data-customer="sharon">
               <img class="quote" src="images/quote.svg" alt="quote" />
               <div class="review_text">
                 The strength of lorem ipsum is its weakness: it doesn't
@@ -663,9 +662,25 @@
             <div class="gutter-sizer"></div>
             <div class="grid-item">
               <img src="images/gallery/gallery1.jpg" alt="gallery 1" />
+              <div class="grid_hover">
+                <div class="hover_icon">
+                <i class="fa fa-search fa-search-circle"></i>
+                </div>
+                <div class="hover_icon">
+                <i class="fas fa-arrows-alt fa-arrows-alt-personal"></i>
+                </div>
+              </div>
             </div>
             <div class="grid-item">
               <img src="images/gallery/gallery2.jpg" alt="gallery 2" />
+              <div class="grid_hover">
+                <div class="hover_icon">
+                  <i class="fa fa-search fa-search-circle"></i>
+                </div>
+                <div class="hover_icon">
+                  <i class="fas fa-arrows-alt fa-arrows-alt-personal"></i>
+                </div>
+              </div>
             </div>
             <div class="grid-item">
               <div class="sub-grid">
@@ -673,9 +688,25 @@
                 <div class="subgutter-sizer"></div>
                 <div class="subgrid-item">
                   <img src="images/gallery/gallery3.jpg" alt="gallery 3" />
+                  <div class="grid_hover">
+                    <div class="hover_icon">
+                      <i class="fa fa-search fa-search-circle"></i>
+                    </div>
+                    <div class="hover_icon">
+                      <i class="fas fa-arrows-alt fa-arrows-alt-personal"></i>
+                    </div>
+                  </div>
                 </div>
                 <div class="subgrid-item">
                   <img src="images/gallery/gallery4.jpg" alt="gallery 4" />
+                  <div class="grid_hover">
+                    <div class="hover_icon">
+                      <i class="fa fa-search fa-search-circle"></i>
+                    </div>
+                    <div class="hover_icon">
+                      <i class="fas fa-arrows-alt fa-arrows-alt-personal"></i>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="sub-grid2">
@@ -683,63 +714,214 @@
                 <div class="subgutter-sizer"></div>
                 <div class="subgrid-item2 subgrid-item2--height">
                   <img src="images/gallery/gallery5.jpg" alt="gallery 5" />
+                  <div class="grid_hover">
+                    <div class="hover_icon">
+                      <i class="fa fa-search fa-search-circle"></i>
+                    </div>
+                    <div class="hover_icon">
+                      <i class="fas fa-arrows-alt fa-arrows-alt-personal"></i>
+                    </div>
+                  </div>
                 </div>
                 <div class="subgrid-item2 subgrid-item2--height">
                   <img src="images/gallery/gallery6.jpg" alt="gallery 6" />
+                  <div class="grid_hover">
+                    <div class="hover_icon">
+                      <i class="fa fa-search fa-search-circle"></i>
+                    </div>
+                    <div class="hover_icon">
+                      <i class="fas fa-arrows-alt fa-arrows-alt-personal"></i>
+                    </div>
+                  </div>
                 </div>
                 <div class="subgrid-item2 subgrid-item2--height">
                   <img src="images/gallery/gallery7.jpg" alt="gallery 7" />
+                  <div class="grid_hover">
+                    <div class="hover_icon">
+                      <i class="fa fa-search fa-search-circle"></i>
+                    </div>
+                    <div class="hover_icon">
+                      <i class="fas fa-arrows-alt fa-arrows-alt-personal"></i>
+                    </div>
+                  </div>
                 </div>
                 <div class="subgrid-item2 subgrid-item2--height">
-                  <img src="images/gallery/gallery12.jpg" alt="gallery 12" />
+                  <img class="grid_img" src="images/gallery/gallery12.jpg" alt="gallery 12" />
+                  <div class="grid_hover">
+                    <div class="hover_icon">
+                      <i class="fa fa-search fa-search-circle"></i>
+                    </div>
+                    <div class="hover_icon">
+                      <i class="fas fa-arrows-alt fa-arrows-alt-personal"></i>
+                    </div>
+                  </div>
                 </div>
                 <div class="subgrid-item2 subgrid-item2--height">
                   <img src="images/gallery/gallery13.jpg" alt="gallery 13" />
+                  <div class="grid_hover">
+                    <div class="hover_icon">
+                      <i class="fa fa-search fa-search-circle"></i>
+                    </div>
+                    <div class="hover_icon">
+                      <i class="fas fa-arrows-alt fa-arrows-alt-personal"></i>
+                    </div>
+                  </div>
                 </div>
                 <div class="subgrid-item2 subgrid-item2--height">
                   <img src="images/gallery/gallery14.jpg" alt="gallery 14" />
+                  <div class="grid_hover">
+                    <div class="hover_icon">
+                      <i class="fa fa-search fa-search-circle"></i>
+                    </div>
+                    <div class="hover_icon">
+                      <i class="fas fa-arrows-alt fa-arrows-alt-personal"></i>
+                    </div>
+                  </div>
                 </div>
                 <div class="subgrid-item2 subgrid-item2--height">
                   <img src="images/gallery/gallery18.jpg" alt="gallery 18" />
+                  <div class="grid_hover">
+                    <div class="hover_icon">
+                      <i class="fa fa-search fa-search-circle"></i>
+                    </div>
+                    <div class="hover_icon">
+                      <i class="fas fa-arrows-alt fa-arrows-alt-personal"></i>
+                    </div>
+                  </div>
                 </div>
                 <div class="subgrid-item2 subgrid-item2--height">
                   <img src="images/gallery/gallery19.jpg" alt="gallery 19" />
+                  <div class="grid_hover">
+                    <div class="hover_icon">
+                      <i class="fa fa-search fa-search-circle"></i>
+                    </div>
+                    <div class="hover_icon">
+                      <i class="fas fa-arrows-alt fa-arrows-alt-personal"></i>
+                    </div>
+                  </div>
                 </div>
                 <div class="subgrid-item2 subgrid-item2--height">
                   <img src="images/gallery/gallery20.jpg" alt="gallery 20" />
+                  <div class="grid_hover">
+                    <div class="hover_icon">
+                      <i class="fa fa-search fa-search-circle"></i>
+                    </div>
+                    <div class="hover_icon">
+                      <i class="fas fa-arrows-alt fa-arrows-alt-personal"></i>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="grid-item">
               <img src="images/gallery/gallery8.jpg" alt="gallery 8" />
+              <div class="grid_hover">
+                <div class="hover_icon">
+                  <i class="fa fa-search fa-search-circle"></i>
+                </div>
+                <div class="hover_icon">
+                  <i class="fas fa-arrows-alt fa-arrows-alt-personal"></i>
+                </div>
+              </div>
             </div>
             <div class="grid-item">
               <img src="images/gallery/gallery9.jpg" alt="gallery 9" />
+              <div class="grid_hover">
+                <div class="hover_icon">
+                  <i class="fa fa-search fa-search-circle"></i>
+                </div>
+                <div class="hover_icon">
+                  <i class="fas fa-arrows-alt fa-arrows-alt-personal"></i>
+                </div>
+              </div>
             </div>
             <div class="grid-item">
               <img src="images/gallery/gallery17.jpg" alt="gallery 17" />
+              <div class="grid_hover">
+                <div class="hover_icon">
+                  <i class="fa fa-search fa-search-circle"></i>
+                </div>
+                <div class="hover_icon">
+                  <i class="fas fa-arrows-alt fa-arrows-alt-personal"></i>
+                </div>
+              </div>
             </div>
             <div class="grid-item">
               <img src="images/gallery/gallery10.jpg" alt="gallery 10" />
+              <div class="grid_hover">
+                <div class="hover_icon">
+                  <i class="fa fa-search fa-search-circle"></i>
+                </div>
+                <div class="hover_icon">
+                  <i class="fas fa-arrows-alt fa-arrows-alt-personal"></i>
+                </div>
+              </div>
             </div>
             <div class="grid-item">
               <img src="images/gallery/gallery1.jpg" alt="gallery 1" />
+              <div class="grid_hover">
+                <div class="hover_icon">
+                  <i class="fa fa-search fa-search-circle"></i>
+                </div>
+                <div class="hover_icon">
+                  <i class="fas fa-arrows-alt fa-arrows-alt-personal"></i>
+                </div>
+              </div>
             </div>
             <div class="grid-item grid-hidden">
               <img src="images/gallery/gallery21.jpg" alt="gallery 1" />
+              <div class="grid_hover">
+                <div class="hover_icon">
+                  <i class="fa fa-search fa-search-circle"></i>
+                </div>
+                <div class="hover_icon">
+                  <i class="fas fa-arrows-alt fa-arrows-alt-personal"></i>
+                </div>
+              </div>
             </div>
             <div class="grid-item grid-hidden">
               <img src="images/gallery/gallery22.jpg" alt="gallery 1" />
+              <div class="grid_hover">
+                <div class="hover_icon">
+                  <i class="fa fa-search fa-search-circle"></i>
+                </div>
+                <div class="hover_icon">
+                  <i class="fas fa-arrows-alt fa-arrows-alt-personal"></i>
+                </div>
+              </div>
             </div>
             <div class="grid-item grid-hidden">
               <img src="images/gallery/gallery23.jpg" alt="gallery 1" />
+              <div class="grid_hover">
+                <div class="hover_icon">
+                  <i class="fa fa-search fa-search-circle"></i>
+                </div>
+                <div class="hover_icon">
+                  <i class="fas fa-arrows-alt fa-arrows-alt-personal"></i>
+                </div>
+              </div>
             </div>
             <div class="grid-item grid-hidden">
-              <img src="images/gallery/gallery24.jpg" alt="gallery 1"
-              />
+              <img src="images/gallery/gallery24.jpg" alt="gallery 1" />
+              <div class="grid_hover">
+                <div class="hover_icon">
+                  <i class="fa fa-search fa-search-circle"></i>
+                </div>
+                <div class="hover_icon">
+                  <i class="fas fa-arrows-alt fa-arrows-alt-personal"></i>
+                </div>
+              </div>
             </div>
             <div class="grid-item grid-hidden">
               <img src="images/gallery/gallery25.jpg" alt="gallery 1" />
+              <div class="grid_hover">
+                <div class="hover_icon">
+                  <i class="fa fa-search fa-search-circle"></i>
+                </div>
+                <div class="hover_icon">
+                  <i class="fas fa-arrows-alt fa-arrows-alt-personal"></i>
+                </div>
+              </div>
             </div>
           </div>
           <div class="load">

@@ -9,7 +9,7 @@ $(function() {
         } else {
             $("#load_filter").hide();
         }
-        let item = $(".portfolio .portfolio_item");
+        let item = $(".portfolio .portfolio_item")
        item.fadeOut("slow");
         item.each(function() {
             if ($(this).hasClass(category)) {
@@ -31,9 +31,7 @@ $(function (){
         if ($(".portfolio_item.invisible:hidden").length === 0) {
         $("#load_filter").fadeOut("slow");}
     });
-    });
-
-  
+});
 
 // init Masonry
 $(function() {

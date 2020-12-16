@@ -1,6 +1,7 @@
 //Filter
 $(function() {
-    $(".filter_portfolio li").on('click', function() {
+    $(".filter_portfolio li").on('click', function(event) {
+        event.preventDefault();
         let category = $(this).attr("data-filter");
         $(".filter_portfolio li").removeClass("active");
         $(this).addClass("active");
@@ -21,17 +22,19 @@ $(function() {
 //Load more 12 + 12
 $(function (){
         const elements = $(".portfolio_item.invisible");
-        $(".portfolio_item").slice(0, 12).show();
+    $(elements).hide();
         if ($(elements).length !== 0) {
             $("#load_filter").show();
         }
         $('#load_filter').on('click', function() {
         $('.portfolio_item.invisible:hidden').slice(0, 12).slideDown( "slow" );
-            $('.portfolio_item.invisible').addClass("all");
+
+            $('.portfolio_item.invisible').addClass('all').removeClass('invisible');
         if ($(".portfolio_item.invisible:hidden").length === 0) {
-        $("#load_filter").fadeOut("slow");}
+        $("#load_filter").remove();}
     });
 });
+
 
 // init Masonry
 $(function() {
